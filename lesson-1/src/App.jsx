@@ -1,5 +1,4 @@
 
-import './App.css'
 import Content from './Content'
 import Footer from './Footer'
 import Header from './Header'
@@ -10,19 +9,17 @@ function App() {
   
 
   return (
-    <>
+    <div className='App'>
 
-      
-        <p>
           
           < Header />      {/* Custom Element */}
           < Content />
           < Footer />
           < Recap />
-        </p>
+        
       
       
-    </>
+    </div>
   )
 }
 
