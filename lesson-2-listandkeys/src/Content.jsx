@@ -32,6 +32,9 @@ const Content = () => {
       <button onClick={handleNameChange}>Chande Name</button>
       <button onClick={() => handelClickOne("Kennymas")}>Click This</button>
       <button onClick={(event) => handleClickTwo(event)}>Click Now</button>
+
+
+
     </main>
   )
 }
