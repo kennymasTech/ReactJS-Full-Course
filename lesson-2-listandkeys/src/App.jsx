@@ -14,7 +14,7 @@ function App() {
 
           < Header />      {/* Custom Element */}
           < Content />
-          < ListComponent />
+          {/* < ListComponent /> */}
           < Footer />
            
     </div>
