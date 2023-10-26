@@ -8,41 +8,43 @@ import AddItem from './AddItem';
 
 
 function App() {
-  const [items, setItems] = useState([
+  const [newItem, setNewItem] = useState('');
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('Shoppinglist')) || []);
 
-    {
-      id: 1,
-      checked: false,
-      item: 'ReactJS'
-    },
-    {
-      id: 2,
-      checked: false,
-      item: 'JavaScript'
-    },
-    {
-      id: 3,
-      checked: false,
-      item: 'NodeJS'
-    }
-  ]);
+
+  const setAndSaveItem = (newItem) => {
+    setItems(newItem)
+    localStorage.setItem('Shoppinglist', JSON.stringify(newItem))
+  }
+
+
+  const addItem = (item) => {
+    const id = items.length ? items[items.length - 1].id + 1 : 1;
+    const myNewItem = {id, checked: false, item};
+    const listItems = [...items, myNewItem];
+    setAndSaveItem(listItems)
+  }
+
 
 // To be able to check our checkbox
 const handleCheck = (id) => {
-
   const listItems = items.map((item) => item.id === id ? {...item, checked: !item.checked} : item)
-  setItems(listItems)
-}
+  setAndSaveItem(listItems)
+};
 
 
-// To be able to delete our checkbox
 const handleDelete = (id) => {
-
   const listItems = items.filter((item) => item.id !== id)
-  setItems(listItems)
+  setAndSaveItem(listItems)
+};
 
-  // To save to local storage after delete
-  localStorage.setItem('ShoppingList', JSON.stringify(listItems))
+
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if(!newItem) return; 
+  addItem(newItem);
+  setNewItem('');
 }
 
 
@@ -50,7 +52,7 @@ const handleDelete = (id) => {
     <div className='App'>
 
           < Header title="Cohort 3.0 List" />
-          < AddItem />   
+          < AddItem newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} />   
           < Content items={items} handleCheck={handleCheck} handleDelete={handleDelete} />
           < Footer length={items.length} />
            
