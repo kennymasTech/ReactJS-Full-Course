@@ -21,6 +21,7 @@ function App() {
           colorValue={colorValue} 
           setColorValue={setColorValue} 
           setHexValue={setHexValue}
+          isDarkText={isDarkText}
           setDarkText={setDarkText}
           />
     </div>
