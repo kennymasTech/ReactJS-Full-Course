@@ -1,5 +1,6 @@
 
 import React from 'react'
+import colorNames from 'colornames'
 
 const Input = ({ colorValue, setColorValue, setHexValue, isDarkText, setDarkText}) => {
   return (
@@ -13,7 +14,7 @@ const Input = ({ colorValue, setColorValue, setHexValue, isDarkText, setDarkText
             value={colorValue} 
             onChange={(e) => {
                 setColorValue(e.target.value)
-                setHexValue((e.target.value))
+                setHexValue(colorNames(e.target.value))
             }}
 
              />
