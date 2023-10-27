@@ -5,7 +5,7 @@ const Square = ({ colorValue, hexValue, isDarkText }) => {
   return (
     <section 
             className='square' 
-            style={{backgroundColor: colorValue, 
+            style={{backgroundColor: hexValue || colorValue, 
             color: isDarkText ? "#FFF" : "#000"
         }} 
         >

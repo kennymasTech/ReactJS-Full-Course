@@ -57,7 +57,8 @@ button {
   margin-top: 0.5rem;
   font-size: 1rem;
   padding: 0.25rem;
-  
+  box-shadow: 2px 2px 5px #000;
+  border-radius: 0.25rem;
 }
 
 
