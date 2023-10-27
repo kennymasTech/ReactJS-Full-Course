@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-const Input = ({ colorValue, setColorValue}) => {
+const Input = ({ colorValue, setColorValue, setHexValue}) => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
         <label>Add Color Name:</label>
@@ -11,7 +11,10 @@ const Input = ({ colorValue, setColorValue}) => {
             required 
             placeholder='Add color name' 
             value={colorValue} 
-            onChange={(e) => setColorValue(e.target.value)}
+            onChange={(e) => {
+                setColorValue(e.target.value)
+                setHexValue(e.target.value)
+            }}
              />
         
     </form>
