@@ -10,11 +10,11 @@ html {
 }
 
 .app {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .square {
@@ -42,7 +42,7 @@ label {
 }
 
 input[type="text"] {
-  margin-top: o.5rem;
+  margin-top: 0.5rem;
   padding: 0.25rem;
   width: 100%;
   font-size: 1rem;
@@ -60,83 +60,3 @@ button {
   box-shadow: 2px 2px 5px #000;
   border-radius: 0.25rem;
 }
-
-
-
-/* 
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  outline: none;
-}
-html {
-  overflow-y: scroll;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  scroll-behavior: smooth;
-  min-height: 100vh;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.squre {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 20px;
-  height: 50px;
-  border: 1px solid black;
-  padding: 25px 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-form label {
-  position: absolute;
-  left: -99999px;
-}
-
-form input[type='text'] {
-  flex-grow: 1;
-  width: 250px;
-  max-width: 100%;
-  min-height: 38px;
-  font-size: 1rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  margin-top: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-}
-
-button {
-  cursor: pointer;
-  height: 45px;
-  min-width: 100%;
-  background-color: gainsboro;
-  border-radius: 5px;
-  padding: 0.5rem;
-  font-size: 1.4rem;
-  box-shadow: 2px 4px rgba(0, 0, 0, 0.6);
-} */
