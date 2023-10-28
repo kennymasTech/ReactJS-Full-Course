@@ -20,7 +20,7 @@ html {
 }
 
 
-.square {
+/* .square {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,17 +32,18 @@ html {
   border-radius: 10px;
   margin-bottom: 0.7rem;
   box-shadow: 2px 2px 5px rgba(53, 55, 44, 0.7);
-}
+} */
 
-/* .square {
+.square {
   width: 300px;
   height: 300px;
   border: 2px solid black;
   display: grid;
   place-content: center;
   box-shadow: 2px 2px 5px #000;
+  margin-bottom: 0.7rem;
   border-radius: 0.25rem;
-} */
+}
 
 .square p {
   text-align: center;
