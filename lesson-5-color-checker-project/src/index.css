@@ -9,6 +9,16 @@ html {
   font-size: 36px;
 }
 
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
 /* .app {
   display: flex;
   flex-direction: column;
