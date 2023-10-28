@@ -9,13 +9,13 @@ html {
   font-size: 36px;
 }
 
-.app {
+/* .app {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
+} */
 
 .square {
   width: 300px;
