@@ -9,7 +9,6 @@ html {
   font-size: 36px;
 }
 
-
 .App {
   display: flex;
   flex-direction: column;
@@ -18,21 +17,6 @@ html {
   height: 100vh;
   width: 100vw;
 }
-
-
-/* .square {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
-  border: 2px solid black;
-  width: 300px;
-  height: 300px;
-  border-radius: 10px;
-  margin-bottom: 0.7rem;
-  box-shadow: 2px 2px 5px rgba(53, 55, 44, 0.7);
-} */
 
 .square {
   width: 300px;
