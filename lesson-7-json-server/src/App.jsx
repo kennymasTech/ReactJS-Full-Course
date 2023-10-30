@@ -20,13 +20,26 @@ function App() {
 
 
   // // useEffect syntax
+
   // useEffect(() => {
   //   //  the function
   // }, [dependencies])
 
   useEffect(() => {
-    localStorage.setItem('Shoppinglist', JSON.stringify(items))
-  }, [items])
+    const fetchItems = async () => {
+      try {
+        const response = await fetch(API_URL);
+        const listItems = await response.json();
+
+        setItems(listItems);
+
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    ( async () => fetchItems())()
+    
+  }, [])
 
   
   // const setAndSaveItem = (item) => {
