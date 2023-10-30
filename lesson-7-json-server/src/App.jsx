@@ -28,15 +28,19 @@ function App() {
   // }, [dependencies])
 
   useEffect(() => {
+
     const fetchItems = async () => {
       try {
+
         const response = await fetch(API_URL);
+        if(!response.ok) throw Error('Did not receive expected data')
         const listItems = await response.json();
         console.log(listItems);
         setItems(listItems);
+        setFetchError(null);
 
       } catch (err) {
-        console.log(err.setItems);
+        setFetchError(err.message);
       }
     }
     (async () => fetchItems())()
@@ -85,8 +89,15 @@ const handleSubmit = (e) => {
 
           < Header title="Cohort 3.0 List" />
           < AddItem newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} />  
-          < SearchItem search={search} setSearch={setSearch} /> 
-          < Content items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))} handleCheck={handleCheck} handleDelete={handleDelete} />
+          < SearchItem search={search} setSearch={setSearch} />
+
+          <main>
+            {fetchError && <p style={{color: "red"}}>{`Error:${fetchError}`}</p> }
+
+            {!fetchError &&
+          < Content items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))} handleCheck={handleCheck} handleDelete={handleDelete} />}
+          </main>
+          
           < Footer length={items.length} />
            
     </div>
