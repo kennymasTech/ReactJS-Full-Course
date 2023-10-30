@@ -10,7 +10,7 @@ import SearchItem from './SearchItem';
 
 function App() {
 
-  const API_URL = "http://localhost:3500/itemss"
+  const API_URL = "http://localhost:3500/items"
 
   const [newItem, setNewItem] = useState('');
 
@@ -19,6 +19,8 @@ function App() {
   const [search, setSearch] = useState('');
 
   const [fetchError, setFetchError] = useState(null)
+
+  const [isloading, setIsLoading] = useState(true)
 
 
   // // useEffect syntax
@@ -41,9 +43,15 @@ function App() {
 
       } catch (err) {
         setFetchError(err.message);
+      } finally {
+        setIsLoading(false)
       }
     }
-    (async () => fetchItems())()
+
+    setTimeout (() => {
+      (async () => fetchItems())()
+    }, 2000)
+    
     
   }, [])
 
@@ -97,7 +105,7 @@ const handleSubmit = (e) => {
             {!fetchError &&
           < Content items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))} handleCheck={handleCheck} handleDelete={handleDelete} />}
           </main>
-          
+
           < Footer length={items.length} />
            
     </div>
