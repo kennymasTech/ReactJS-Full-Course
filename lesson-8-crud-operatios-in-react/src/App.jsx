@@ -5,6 +5,8 @@ import Footer from './Footer'
 import Header from './Header'
 import AddItem from './AddItem';
 import SearchItem from './SearchItem';
+import apiRequest from './apiRequest'
+
 
 
 
@@ -61,13 +63,26 @@ function App() {
   // }
 
 
-  const addItem = (item) => {
+  const addItem = async (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = {id, checked: false, item};
     const listItems = [...items, myNewItem];
     setItems(listItems)
+
+    const postOptions = {
+      method: 'POST',
+      Header: {
+        "Content-type": "application/json"
+      },
+  
+      body: JSON.stringify(myNewItem)
+    }
+  
+    const result = await apiRequest(API_URL, postOptions);
+    if(result) setFetchError(result)
   }
 
+  
 
 // To be able to check our checkbox
 const handleCheck = (id) => {
