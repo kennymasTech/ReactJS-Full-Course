@@ -71,7 +71,7 @@ function App() {
 
     const postOptions = {
       method: 'POST',
-      Header: {
+      headers: {
         "Content-type": "application/json"
       },
   
@@ -85,15 +85,33 @@ function App() {
   
 
 // To be able to check our checkbox
-const handleCheck = (id) => {
+const handleCheck = async (id) => {
   const listItems = items.map((item) => item.id === id ? {...item, checked: !item.checked} : item)
   setItems(listItems)
+
+  const myItem = listItems.filter((item) => item.id === id)
+  const updateOptions = {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json"
+    },
+
+    body: JSON.stringify({checked: myItem[0].checked})
+  }
+  const reqUrl = `${API_URL}/${id}`
+  const result =  apiRequest(reqUrl, updateOptions);
+    if(result) setFetchError(result)
 };
 
 
-const handleDelete = (id) => {
+const handleDelete = async (id) => {
   const listItems = items.filter((item) => item.id !== id)
   setItems(listItems)
+
+  const deleteOptions = { method: 'DELETE' }
+  const reqUrl = `${API_URL}/${id}`
+  const result = await apiRequest(reqUrl, deleteOptions);
+  if(result) setFetchError(result)
 };
 
 

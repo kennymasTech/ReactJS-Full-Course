@@ -16,7 +16,34 @@
       "item": "Rocco"
     },
     {
-      "id": 4
+      "id": 4,
+      "checked": false,
+      "item": "Hollar"
+    },
+    {
+      "id": 5,
+      "checked": false,
+      "item": "Muhammed"
+    },
+    {
+      "id": 6,
+      "checked": false,
+      "item": "Muaz"
+    },
+    {
+      "id": 7,
+      "checked": false,
+      "item": "Kennymas"
+    },
+    {
+      "id": 8,
+      "checked": false,
+      "item": "Hollar"
+    },
+    {
+      "id": 9,
+      "checked": false,
+      "item": "Rocco"
     }
   ]
 }
