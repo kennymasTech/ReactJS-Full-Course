@@ -10,13 +10,15 @@ import SearchItem from './SearchItem';
 
 function App() {
 
-  const API_URL = "http://localhost:3000/items"
+  const API_URL = "http://localhost:3500/itemss"
 
   const [newItem, setNewItem] = useState('');
 
   const [items, setItems] = useState([]);
 
   const [search, setSearch] = useState('');
+
+  const [fetchError, setFetchError] = useState(null)
 
 
   // // useEffect syntax
@@ -30,14 +32,14 @@ function App() {
       try {
         const response = await fetch(API_URL);
         const listItems = await response.json();
-
+        console.log(listItems);
         setItems(listItems);
 
       } catch (err) {
-        console.log(err);
+        console.log(err.setItems);
       }
     }
-    ( async () => fetchItems())()
+    (async () => fetchItems())()
     
   }, [])
 
