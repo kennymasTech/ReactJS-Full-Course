@@ -9,8 +9,13 @@ import SearchItem from './SearchItem';
 
 
 function App() {
+
+  const API_URL = "http://localhost:3000/items"
+
   const [newItem, setNewItem] = useState('');
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('Shoppinglist')));
+
+  const [items, setItems] = useState([]);
+
   const [search, setSearch] = useState('');
 
 
