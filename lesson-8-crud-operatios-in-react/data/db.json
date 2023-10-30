@@ -1,0 +1,20 @@
+{
+    "items": [
+                {
+                    "id": 1,
+                    "checked": false,
+                    "item": "Kennymas"
+                },
+                   {
+                    "id": 2,
+                    "checked": false,
+                    "item": "Supreme"
+                },
+
+                   { "id": 3,
+                    "checked": false,
+                    "item": "Rocco"
+                }
+                
+    ]
+}
