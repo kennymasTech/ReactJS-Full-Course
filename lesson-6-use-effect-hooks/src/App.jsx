@@ -1,5 +1,5 @@
 
-import {useState} from 'react'
+import { useState, useEffect } from 'react'
 import Content from './Content'
 import Footer from './Footer'
 import Header from './Header'
@@ -11,33 +11,43 @@ import SearchItem from './SearchItem';
 function App() {
   const [newItem, setNewItem] = useState('');
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('Shoppinglist')) || []);
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('');
 
 
-  const setAndSaveItem = (newItem) => {
-    setItems(newItem)
-    localStorage.setItem('Shoppinglist', JSON.stringify(newItem))
-  }
+  // // useEffect syntax
+  // useEffect(() => {
+  //   //  the function
+  // }, [dependencies])
+
+  useEffect(() => {
+    localStorage.setItem('Shoppinglist', JSON.stringify(items))
+  }, [items])
+
+  
+  // const setAndSaveItem = (item) => {
+  //   setItems(listItems)
+    
+  // }
 
 
   const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = {id, checked: false, item};
     const listItems = [...items, myNewItem];
-    setAndSaveItem(listItems)
+    setItems(listItems)
   }
 
 
 // To be able to check our checkbox
 const handleCheck = (id) => {
   const listItems = items.map((item) => item.id === id ? {...item, checked: !item.checked} : item)
-  setAndSaveItem(listItems)
+  setItems(listItems)
 };
 
 
 const handleDelete = (id) => {
   const listItems = items.filter((item) => item.id !== id)
-  setAndSaveItem(listItems)
+  setItems(listItems)
 };
 
 
