@@ -23,6 +23,7 @@ function App() {
         console.log(error)
       }
     }
+    
     fetchItems()
   })
   return (
