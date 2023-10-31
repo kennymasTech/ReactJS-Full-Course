@@ -26,6 +26,7 @@ function App() {
     
     fetchItems()
   })
+  
   return (
     <div className="App">
       <Form reqType={reqType} setReqType={setReqType} />
