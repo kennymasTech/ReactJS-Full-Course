@@ -1,5 +1,5 @@
 import React from 'react';
-import Row from './Row'
+import Row from './Row';
 
 const Table = ({ items }) => {
   return (
@@ -14,6 +14,6 @@ const Table = ({ items }) => {
       
     </div>
   )
-}
+};
 
 export default Table
