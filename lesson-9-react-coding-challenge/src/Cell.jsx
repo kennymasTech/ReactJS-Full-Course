@@ -7,6 +7,6 @@ const Cell = ({ cellData }) => {
         {cellData}
     </td>
   )
-}
+};
 
 export default Cell
