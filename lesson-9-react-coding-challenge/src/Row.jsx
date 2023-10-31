@@ -12,6 +12,6 @@ const Row = ({ item }) => {
         })}
     </tr>
   )
-}
+};
 
 export default Row
