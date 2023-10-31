@@ -1,7 +1,7 @@
 import React from 'react'
 import Cell from './Cell'
 
-const Row = () => {
+const Row = ({ item }) => {
   return (
     
     <tr>

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Cell = ({cellData}) => {
+const Cell = ({ cellData }) => {
   return (
     
-    <tr>
+    <td>
         {cellData}
-    </tr>
+    </td>
   )
 }
 

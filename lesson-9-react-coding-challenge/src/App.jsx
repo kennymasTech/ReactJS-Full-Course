@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Form from './form';
-import List from './List';
 import Table from './Table';
 
 
