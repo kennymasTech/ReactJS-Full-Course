@@ -9,7 +9,7 @@ const Row = ({ item }) => {
             return (
                 <Cell key={key} cellData={JSON.stringify(value)} />
             )
-        })}
+        })};
     </tr>
   )
 };
