@@ -25,7 +25,7 @@ function App() {
     }
     
     fetchItems()
-  })
+  });
   
   return (
     <div className="App">
