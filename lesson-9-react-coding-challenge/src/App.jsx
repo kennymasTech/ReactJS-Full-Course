@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import './App.css';
-import Form from 'react';
+import Form from './form';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         const data = await response.json();
 
         // console.log(data)
-        setItems(items)
+        setItems(data)
       } catch (error) {
         console.log(error)
       }
@@ -26,7 +26,7 @@ function App() {
   })
   return (
     <div className="App">
-      < Form reqType={reqType} setReqType={setReqType} />
+      <Form reqType={reqType} setReqType={setReqType} />
     </div>
   );
 }

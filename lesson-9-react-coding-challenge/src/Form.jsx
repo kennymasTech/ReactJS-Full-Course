@@ -1,28 +1,24 @@
 import React from 'react'
 import Button from './Button'
 
-const Form = ({ reqType, setReqType }) => {
+const Form = ({reqType, setReqType}) => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-
-      <Button 
-        buttontext = "users"
-        reqType={reqType}
-        setReqType={setReqType}
-      />
-
-      <Button 
-        buttontext = "posts"
-        reqType={reqType}
-        setReqType={setReqType}
-      />
-
-      <Button 
-        buttontext = "comments"
-        reqType={reqType}
-        setReqType={setReqType}
-      />
-
+        <Button
+            buttonText='Users'
+            reqType={reqType}
+            setReqtype={setReqType}
+        />
+        <Button
+            buttonText='Posts'
+            reqType={reqType}
+            setReqtype={setReqType}
+        />
+        <Button
+            buttonText='Comments'
+            reqType={reqType}
+            setReqtype={setReqType}
+        />
     </form>
   )
 }
