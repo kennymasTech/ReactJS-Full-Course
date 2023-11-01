@@ -50,7 +50,7 @@ const App = () => {
       post.body.toLowerCase().includes(search.toLowerCase()) 
       || 
       post.title.toLowerCase().includes(search.toLowerCase()));
-      searchResult(filterResult)
+      searchResult(filterResult.reverse())
   }, [posts, search])
 
   const navigate = useNavigate();
