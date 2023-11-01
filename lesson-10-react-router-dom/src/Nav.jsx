@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+
+import { NavLink } from 'react-router-dom'
 
 const Nav = ({search, setSearch}) => {
   return (
@@ -18,9 +18,9 @@ const Nav = ({search, setSearch}) => {
         </form>
 
         <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/post">Post</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/post">Post</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
         </ul>
 
     </nav>
