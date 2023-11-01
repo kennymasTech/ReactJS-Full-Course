@@ -77,7 +77,7 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<HomeLayout />}>
+      <Route path="/" element={<HomeLayout search={setSearch} />}>
         <Route index element={<Home posts={searchResult} />} />
         <Route path="/post">
           <Route index element={
