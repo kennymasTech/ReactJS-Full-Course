@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 
 const Post = ({ post }) => {
@@ -12,6 +12,6 @@ const Post = ({ post }) => {
             <p className='postBody'>{post.body.length <= 24 ? post.body : `${post.body.slice(0, 24)}...`}</p>
         </article>
     )
-}
+};
 
 export default Post
