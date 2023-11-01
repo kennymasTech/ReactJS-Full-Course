@@ -39,7 +39,7 @@ const App = () => {
   const [searchResult, setSearchResult] = useState([]);
 
   const handleDelete = (id) => {
-      const postToDelete = 
+      const postToDelete = posts.filter(post => post.id === id);
   };
 
 
