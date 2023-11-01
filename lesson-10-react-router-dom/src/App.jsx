@@ -43,7 +43,7 @@ const App = () => {
   const [searchResult, setSearchResult] = useState([])
 
   const handleDelete = () => {
-
+      
   }
 
       return (
@@ -57,8 +57,6 @@ const App = () => {
                 <Route path='*' element={<Missing />} />
             </Route>
           </Routes>
-
-
       )
 }
 
