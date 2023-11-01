@@ -1,10 +1,18 @@
 
 
-const Home = () => {
+const Home = ({ posts}) => {
   return (
-    <div>
-      Home
-    </div>
+    <main className="Home">
+      
+      {/* <h1>Home</h1>
+      <ul>
+        {posts.map(post => (
+          <li key={post.id}>
+            <Link to={`/post/${post.id}`}>{post.title}</Link>
+          </li>
+        ))}
+      </ul>  */}
+    </main>
   )
 }
 
