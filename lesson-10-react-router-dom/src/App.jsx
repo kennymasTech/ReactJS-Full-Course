@@ -50,7 +50,7 @@ const App = () => {
       post.body.toLowerCase().includes(search.toLowerCase()) 
       || 
       post.title.toLowerCase().includes(search.toLowerCase()))
-      searchResult(filterResult.reverse())
+      setSearchResult(filterResult.reverse())
   }, [posts, search])
 
   const navigate = useNavigate();
@@ -78,7 +78,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomeLayout />}>
-        <Route index element={<Home posts={posts} />} />
+        <Route index element={<Home posts={searchResult} />} />
         <Route path="/post">
           <Route index element={
               <NewPost 
