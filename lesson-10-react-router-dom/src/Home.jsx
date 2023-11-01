@@ -1,17 +1,16 @@
 
+import Feed  from "./Feed"
+
+
 
 const Home = ({ posts}) => {
   return (
     <main className="Home">
-      
-      {/* <h1>Home</h1>
-      <ul>
-        {posts.map(post => (
-          <li key={post.id}>
-            <Link to={`/post/${post.id}`}>{post.title}</Link>
-          </li>
-        ))}
-      </ul>  */}
+      {posts.length ? (
+        <Feed posts={posts} />
+      ) : (
+        <p style={{ marginTop: "2rem" }}>Nothing To Display</p>
+      )}
     </main>
   )
 }

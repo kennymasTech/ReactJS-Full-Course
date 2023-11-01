@@ -23,7 +23,7 @@ const App = () => {
     {
       id: 2,
       title: "Supreme",
-      date: "July 09, 2005 09:45:30 AM",
+      date: "July 09, 1998 09:45:30 AM",
       body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, quasi quidem. Temporibus perferendis asperiores a debitis! Sapiente minima quibusdam animi vero suscipit mollitia cupiditate impedit veritatis. Iste possimus vitae placeat."
     },
     {
@@ -35,27 +35,31 @@ const App = () => {
     {
       id: 4,
       title: "Hollar",
-      date: "November 20, 2004 10:33:45 AM",
+      date: "November 20, 2000 10:33:45 AM",
       body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, quasi quidem. Temporibus perferendis asperiores a debitis! Sapiente minima quibusdam animi vero suscipit mollitia cupiditate impedit veritatis. Iste possimus vitae placeat."
     }
   ])
 
   const [searchResult, setSearchResult] = useState([])
 
-  return (
-      <Routes >
-        <Route path='/' element={<HomeLayout />} >
-            <Route index element={<Home posts={posts} />} />
-            <Route path='/post' element={<NewPost />} >
-                <Route path=':id' element={<PostPage />} />
+  const handleDelete = () => {
+
+  }
+
+      return (
+          <Routes >
+            <Route path='/' element={<HomeLayout />} >
+                <Route index element={<Home posts={posts} />} />
+                <Route path='/post' element={<NewPost />} >
+                    <Route path=':id' element={<PostPage posts={posts} handleDelete={handleDelete} />} />
+                </Route>
+                <Route path='/about' element={<About />} />
+                <Route path='*' element={<Missing />} />
             </Route>
-            <Route path='/about' element={<About />} />
-            <Route path='*' element={<Missing />} />
-        </Route>
-      </Routes>
+          </Routes>
 
 
-  )
+      )
 }
 
 export default App
