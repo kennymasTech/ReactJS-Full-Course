@@ -49,7 +49,7 @@ const App = () => {
     const filterResult = posts.filter(post => 
       post.body.toLowerCase().includes(search.toLowerCase()) 
       || 
-      post.title.toLowerCase().includes(search.toLowerCase()));
+      post.title.toLowerCase().includes(search.toLowerCase()))
       searchResult(filterResult.reverse())
   }, [posts, search])
 
