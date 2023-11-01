@@ -1,10 +1,11 @@
 
 
 const Footer = () => {
+  const date = new Date();
   return (
-    <div>
-      Footer
-    </div>
+    <footer className="footer">
+        <p> CopyRight &copy; {date.getFullYear()}</p>
+    </footer>
   )
 }
 
