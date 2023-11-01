@@ -46,7 +46,11 @@ const App = () => {
 
 
   useEffect (() => {
-    const filterResult = posts.filter(post => post.body.toLowerCase().includes(search.toLowerCase()) || post.title.toLowerCase().includes(search.toLowerCase()))
+    const filterResult = posts.filter(post => 
+      post.body.toLowerCase().includes(search.toLowerCase()) 
+      || 
+      post.title.toLowerCase().includes(search.toLowerCase()));
+      searchResult(filterResult)
   }, [posts, search])
 
   const navigate = useNavigate();
