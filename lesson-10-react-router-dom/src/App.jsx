@@ -64,15 +64,11 @@ const App = () => {
       const date = format(new Date(), 'MMMM dd, yyyy pp');
       const newPost = {id, title: postTitle, date, body: postBody} 
       try {
-        const response = await api.post('/posts');
+        const response = await api.post('/posts', newPost);
       } catch (error) {
         console.log(`Error: ${error.message}`);
       }
-      const allPost = [...posts, newPost]
-      setPosts(allPost);
-      setPostTitle("");
-      setPostBody("");
-      navigate("/");
+      
   };
   
 
