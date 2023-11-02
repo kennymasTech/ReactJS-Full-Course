@@ -1,28 +1,28 @@
 {
   "posts": [
     {
+      "id": 1,
+      "title": "Kennymas",
+      "date": "November 02, 2023 12:52:05 PM",
+      "body": "<main className=\"NewPost\">\n        <h2>New Post</h2>\n          <form className=\"newPostForm\" onSubmit={handleSubmit}>\n              <label htmlFor=\"postTittle\"> Poast Title </label>\n                <input id=\"postTitle\" type=\"text\" required value={postTitle} onChange={(e) => setPostTitle (e.target.value)} />\n                <label htmlFor=\"postBody\"> Poast Body </label>\n                <textarea id=\"postBody\" required value={postBody} onChange={(e) => setPostBody ( e.target.value)}></textarea>\n                <button type=\"submit\">Submit</button>\n          </form>\n    </main>"
+    },
+    {
+      "id": 2,
+      "title": "Supreme",
+      "date": "November 02, 2023 12:52:33 PM",
+      "body": "<main className=\"NewPost\">\n        <h2>New Post</h2>\n          <form className=\"newPostForm\" onSubmit={handleSubmit}>\n              <label htmlFor=\"postTittle\"> Poast Title </label>\n                <input id=\"postTitle\" type=\"text\" required value={postTitle} onChange={(e) => setPostTitle (e.target.value)} />\n                <label htmlFor=\"postBody\"> Poast Body </label>\n                <textarea id=\"postBody\" required value={postBody} onChange={(e) => setPostBody ( e.target.value)}></textarea>\n                <button type=\"submit\">Submit</button>\n          </form>\n    </main>"
+    },
+    {
       "id": 3,
-      "title": "Rocco",
-      "date": "November 02, 2023 11:07:03 AM",
-      "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, quasi quidem. Temporibus perferendis asperiores a debitis! Sapiente minima quibusdam animi vero suscipit mollitia cupiditate impedit veritatis. Iste possimus vitae placeat.\"\n  "
+      "title": "Hollar",
+      "date": "November 02, 2023 2:12:30 PM",
+      "body": "<main className=\"NewPost\">\n        <h2>New Post</h2>\n          <form className=\"newPostForm\" onSubmit={handleSubmit}>\n              <label htmlFor=\"postTittle\"> Poast Title </label>\n                <input id=\"postTitle\" type=\"text\" required value={postTitle} onChange={(e) => setPostTitle (e.target.value)} />\n                <label htmlFor=\"postBody\"> Poast Body </label>\n                <textarea id=\"postBody\" required value={postBody} onChange={(e) => setPostBody ( e.target.value)}></textarea>\n                <button type=\"submit\">Submit</button>\n          </form>\n    </main>"
     },
     {
       "id": 4,
-      "title": "Hollar",
-      "date": "November 02, 2023 11:07:34 AM",
-      "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, quasi quidem. Temporibus perferendis asperiores a debitis! Sapiente minima quibusdam animi vero suscipit mollitia cupiditate impedit veritatis. Iste possimus vitae placeat.\"\n  "
-    },
-    {
-      "id": 5,
-      "title": "Supreme",
-      "date": "November 02, 2023 11:08:11 AM",
-      "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, quasi quidem. Temporibus perferendis asperiores a debitis! Sapiente minima quibusdam animi vero suscipit mollitia cupiditate impedit veritatis. Iste possimus vitae placeat.\"\n  "
-    },
-    {
-      "id": 6,
-      "title": "Kennymas",
-      "date": "November 02, 2023 11:08:33 AM",
-      "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, quasi quidem. Temporibus perferendis asperiores a debitis! Sapiente minima quibusdam animi vero suscipit mollitia cupiditate impedit veritatis. Iste possimus vitae placeat.\"\n  "
+      "title": "Rocco",
+      "date": "November 02, 2023 2:16:48 PM",
+      "body": "<main className=\"NewPost\">\n        <h2>New Post</h2>\n          <form className=\"newPostForm\" onSubmit={handleSubmit}>\n              <label htmlFor=\"postTittle\"> Poast Title </label>\n                <input id=\"postTitle\" type=\"text\" required value={postTitle} onChange={(e) => setPostTitle (e.target.value)} />\n                <label htmlFor=\"postBody\"> Poast Body </label>\n                <textarea id=\"postBody\" required value={postBody} onChange={(e) => setPostBody ( e.target.value)}></textarea>\n                <button type=\"submit\">Submit</button>\n          </form>\n    </main>"
     }
   ]
 }
