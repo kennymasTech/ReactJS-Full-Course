@@ -52,16 +52,16 @@ const App = () => {
 
   const navigate = useNavigate();
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     try {
-
+      await api.delete(`./posts/${id}`);const postLists = posts.filter((post) => post.id !== id);
+      setPosts(postLists);
+      navigate("/");
     } catch (error) {
       console.log(`Error: ${error.message}`);
     };
+
     
-    const postLists = posts.filter((post) => post.id !== id);
-    setPosts(postLists);
-    navigate("/");
   };
 
   const handleSubmit = async (e) => {
