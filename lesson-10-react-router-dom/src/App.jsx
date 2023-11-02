@@ -86,6 +86,15 @@ const App = () => {
   const handleEdit = async (id) => {
     const date = format(new Date(), 'MMMM dd, yyyy pp');
     const updatedPost = {id, title: editTitle, date, body: editBody} 
+    try {
+      const response = await api.put(`./posts/${id}`, updatedPost);
+      setPosts(posts.map(post => post.id === id ? {...response.data} : post));
+      setEditTitle('');
+      setEditBody('');
+      navigate('/')
+    } catch (error) {
+      console.log(`Error: ${error.message}`);
+    }
   }
   
 
