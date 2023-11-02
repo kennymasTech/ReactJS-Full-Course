@@ -34,8 +34,14 @@ const App = () => {
     const fetchPost = async () => {
       try {
         const response = await api.get('/posts');
-      } catch (error) {
+        setPosts(response.data);
 
+      } catch (error) {
+        if(error.message) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        }
       }
     }
   })
