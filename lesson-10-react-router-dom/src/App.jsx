@@ -8,6 +8,7 @@ import Missing from "./Missing";
 import About from "./About";
 import HomeLayout from "./HomeLayout";
 import api from "./api/posts";
+import EditPost from "./EditPost";
 
 
 const App = () => {
@@ -119,6 +120,8 @@ const App = () => {
             element={<PostPage posts={posts} handleDelete={handleDelete} />}
           />
         </Route>
+
+        <Route path="/edit/:id" element={<EditPost post={posts} handleEdit={handleEdit} editTitle={editTitle} setEditTitle={setEditTitle} editBody={editBody} setEditBody={setEditBody} />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Missing />} />
       </Route>
