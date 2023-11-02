@@ -1,9 +1,10 @@
+
 const NewPost = ({
-  postTitle,
-  postBody,
-  setPostTitle,
-  setPostBody,
-  handleSubmit,
+        postTitle,
+        postBody,
+        setPostTitle,
+        setPostBody,
+        handleSubmit,
 }) => {
   return (
     <main className="NewPost">
