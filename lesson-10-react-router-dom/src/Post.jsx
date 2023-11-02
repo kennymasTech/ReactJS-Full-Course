@@ -1,6 +1,4 @@
-
-import { Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom'
 
 const Post = ({ post }) => {
     return (
@@ -9,9 +7,9 @@ const Post = ({ post }) => {
                 <h2>{post.title}</h2>
                 <p className='postDate'>{post.date}</p>
             </Link>
-            <p className='postBody'>{post.body.length <= 24 ? post.body : `${post.body.slice(0, 24)}...`}</p>
+            <p className='postBody'>{post.body.length <= 24 ? post.body :` ${post.body.slice(0, 24)}...`}</p>
         </article>
     )
-};
+}
 
 export default Post
