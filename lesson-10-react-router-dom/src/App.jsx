@@ -83,8 +83,9 @@ const App = () => {
   };
 
 
-  const handleEdit = async () => {
-
+  const handleEdit = async (id) => {
+    const date = format(new Date(), 'MMMM dd, yyyy pp');
+    const newPost = {id, title: postTitle, date, body: postBody} 
   }
   
 
