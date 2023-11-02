@@ -13,12 +13,12 @@ import api from "./api/posts";
 const App = () => {
   
   const [posts, setPosts] = useState([]);
-
-
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [postTitle, setPostTitle] = useState("")
   const [postBody, setPostBody] = useState("")
+  const [editTitle, setEditTitle] = useState("")
+  const [editBody, setEditBody] = useState("")
 
 
   useEffect (() => {
@@ -85,7 +85,7 @@ const App = () => {
 
   const handleEdit = async (id) => {
     const date = format(new Date(), 'MMMM dd, yyyy pp');
-    const newPost = {id, title: postTitle, date, body: postBody} 
+    const updatedPost = {id, title: editTitle, date, body: editBody} 
   }
   
 
