@@ -65,6 +65,11 @@ const App = () => {
       const newPost = {id, title: postTitle, date, body: postBody} 
       try {
         const response = await api.post('/posts', newPost);
+        const allPost = [...posts, response]
+            setPosts(allPost);
+            setPostTitle("");
+            setPostBody("");
+            navigate("/");
       } catch (error) {
         console.log(`Error: ${error.message}`);
       }
