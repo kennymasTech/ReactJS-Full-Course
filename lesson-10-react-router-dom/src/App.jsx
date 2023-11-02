@@ -7,6 +7,7 @@ import PostPage from "./PostPage";
 import Missing from "./Missing";
 import About from "./About";
 import HomeLayout from "./HomeLayout";
+import api from "./api/posts";
 
 
 const App = () => {
@@ -27,6 +28,17 @@ const App = () => {
       post.title.toLowerCase().includes(search.toLowerCase()))
       setSearchResult(filterResult.reverse())
   }, [posts, search])
+
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      try {
+        const response = await api.get('/posts');
+      } catch (error) {
+
+      }
+    }
+  })
 
   const navigate = useNavigate();
 
