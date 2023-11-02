@@ -53,6 +53,12 @@ const App = () => {
   const navigate = useNavigate();
 
   const handleDelete = (id) => {
+    try {
+
+    } catch (error) {
+      console.log(`Error: ${error.message}`);
+    };
+    
     const postLists = posts.filter((post) => post.id !== id);
     setPosts(postLists);
     navigate("/");
