@@ -65,7 +65,7 @@ const App = () => {
       const newPost = {id, title: postTitle, date, body: postBody} 
       try {
         const response = await api.post('/posts', newPost);
-        const allPost = [...posts, response]
+        const allPost = [...posts, response.data]
             setPosts(allPost);
             setPostTitle("");
             setPostBody("");
