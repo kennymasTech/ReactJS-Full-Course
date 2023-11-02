@@ -20,6 +20,7 @@ const App = () => {
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
 
+
   useEffect(() => {
     const filterResult = posts.filter(
       (post) =>
@@ -28,6 +29,7 @@ const App = () => {
     );
     setSearchResult(filterResult.reverse());
   }, [posts, search]);
+
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -47,6 +49,7 @@ const App = () => {
     fetchPost();
   }, []);
 
+
   const navigate = useNavigate();
 
   const handleDelete = async (id) => {
@@ -59,6 +62,7 @@ const App = () => {
       console.log(`Error: ${error.message}`);
     }
   };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -77,6 +81,7 @@ const App = () => {
     }
   };
 
+
   const handleEdit = async (id) => {
     const date = format(new Date(), "MMMM dd, yyyy pp");
     const updatedPost = { id, title: editTitle, date, body: editBody };
@@ -92,6 +97,7 @@ const App = () => {
       console.log(`Error: ${error.message}`);
     }
   };
+  
 
   return (
     <Routes>
