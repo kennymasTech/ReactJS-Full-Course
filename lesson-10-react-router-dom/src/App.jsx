@@ -62,7 +62,12 @@ const App = () => {
       e.preventDefault(); 
       const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
       const date = format(new Date(), 'MMMM dd, yyyy pp');
-      const newPost = {id, title: postTitle, date, body: postBody};
+      const newPost = {id, title: postTitle, date, body: postBody} 
+      try {
+        const response = await api.post('/posts');
+      } catch (error) {
+        console.log(`Error: ${error.message}`);
+      }
       const allPost = [...posts, newPost]
       setPosts(allPost);
       setPostTitle("");
