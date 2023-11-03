@@ -25,6 +25,12 @@ const App = () => {
 
   const { width } = useWindowSize()
 
+  
+  const {data, fetchError, isLoading} = useAxiosFetch('http://localhost:3000/posts');
+  useEffect(() => {
+    setPosts(data)
+  }, [data])
+
 
   useEffect(() => {
     const filterResult = posts.filter(
@@ -52,6 +58,8 @@ const App = () => {
     };
     fetchPost();
   }, []);   
+
+
 
   const navigate = useNavigate();
 
@@ -105,7 +113,12 @@ const App = () => {
         path="/"
         element={<HomeLayout search={search} setSearch={setSearch} width={ width }/>}
       >
-        <Route index element={<Home posts={searchResult} />} />
+        <Route index element={<Home
+         posts={searchResult} 
+         fetchError={fetchError} 
+         isLoading={isLoading}
+         />
+         } />
         <Route path="/post">
           <Route
             index
