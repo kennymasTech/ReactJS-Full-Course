@@ -39,11 +39,14 @@ const useAxiosFetch = (dataUrl) => {
             isMounted = false
             source.cancel()
         }
-    })
 
-  return (
+        return cleanUp
+        
+    }, [dataUrl])
+
+  return { data, fetchError, isLoading }
     
-  )
+  
 }
 
 export default useAxiosFetch
