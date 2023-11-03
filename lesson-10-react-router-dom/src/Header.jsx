@@ -1,4 +1,5 @@
 import React from 'react'
+import { faLaptop, faTabletAlt, faMobileAlt } from 'react-icons/fa';
 
 const Header = ({title}) => {
   return (
