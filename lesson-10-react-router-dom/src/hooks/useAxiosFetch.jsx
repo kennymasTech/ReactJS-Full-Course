@@ -27,10 +27,16 @@ const useAxiosFetch = (dataUrl) => {
                 if (isMounted) {
                     setFetchError(error.message)
                     setData([])
-                } finally {
-                    
                 }
+            } finally {
+                    isMounted && setIsLoading(false)
             }
+        }
+
+        fetchData(dataUrl);
+
+        const cleanUp = () => {
+            
         }
     })
 
