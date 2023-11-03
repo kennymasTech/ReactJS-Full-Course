@@ -26,7 +26,7 @@ const App = () => {
   const { width } = useWindowSize()
 
   
-  const {data, fetchError, isLoading} = useAxiosFetch('http://localhost:3050/posts');
+  const {data, fetchError, isLoading} = useAxiosFetch('http://localhost:3500/posts');
   useEffect(() => {
     setPosts(data)
   }, [data])
