@@ -37,13 +37,12 @@ const useAxiosFetch = (dataUrl) => {
 
         const cleanUp = () => {
             isMounted = false
+            source.cancel()
         }
     })
 
   return (
-    <>
-      
-    </>
+    
   )
 }
 
