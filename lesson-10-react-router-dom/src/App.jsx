@@ -11,6 +11,7 @@ import api from "./api/posts";
 import EditPost from "./EditPost";
 import useWindowSize from "./hooks/useWindowSize";
 
+
 const App = () => {
   const [posts, setPosts] = useState([]);
 
@@ -21,18 +22,16 @@ const App = () => {
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
 
-  const { width } = useWindowSize
-
+  const { width } = useWindowSize()
 
   useEffect(() => {
     const filterResult = posts.filter(
       (post) =>
-        post.body.toLowerCase().includes(search.toLowerCase()) ||
+        post.body.toLocaleLowerCase().includes(search.toLowerCase()) ||
         post.title.toLowerCase().includes(search.toLowerCase())
     );
     setSearchResult(filterResult.reverse());
   }, [posts, search]);
-
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -50,8 +49,7 @@ const App = () => {
       }
     };
     fetchPost();
-  }, []);
-
+  }, []);   
 
   const navigate = useNavigate();
 
@@ -65,7 +63,6 @@ const App = () => {
       console.log(`Error: ${error.message}`);
     }
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -84,7 +81,6 @@ const App = () => {
     }
   };
 
-
   const handleEdit = async (id) => {
     const date = format(new Date(), "MMMM dd, yyyy pp");
     const updatedPost = { id, title: editTitle, date, body: editBody };
@@ -100,13 +96,12 @@ const App = () => {
       console.log(`Error: ${error.message}`);
     }
   };
-  
 
   return (
     <Routes>
       <Route
         path="/"
-        element={<HomeLayout search={search} setSearch={setSearch} width={width} />}
+        element={<HomeLayout search={search} setSearch={setSearch} width={ width }/>}
       >
         <Route index element={<Home posts={searchResult} />} />
         <Route path="/post">
