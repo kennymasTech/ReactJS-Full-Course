@@ -21,6 +21,8 @@ const App = () => {
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
 
+  const { width } = useWindowSize
+
 
   useEffect(() => {
     const filterResult = posts.filter(
