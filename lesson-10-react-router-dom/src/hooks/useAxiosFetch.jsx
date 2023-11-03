@@ -22,9 +22,14 @@ const useAxiosFetch = (dataUrl) => {
                     setData(response.data)
                     setFetchError(null)
                 }
-                
-            } catch (error) {
 
+            } catch (error) {
+                if (isMounted) {
+                    setFetchError(error.message)
+                    setData([])
+                } finally {
+                    
+                }
             }
         }
     })
