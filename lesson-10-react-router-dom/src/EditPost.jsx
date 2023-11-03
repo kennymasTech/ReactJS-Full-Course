@@ -49,6 +49,6 @@ const EditPost = ({posts, handleEdit, editBody, editTitle, setEditBody, setEditT
         }
   </main>
   )
-}
+};
 
 export default EditPost
