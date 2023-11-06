@@ -2,27 +2,33 @@
   "posts": [
     {
       "id": 1,
-      "title": "Rocco",
-      "date": "November 02, 2023 12:52:43 PM",
-      "body": "Agunyi Ironsi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet corrupti facere dignissimos laborum! Numquam autem inventore vel architecto nam iure id placeat? Iste, maxime nisi."
-    },
-    {
-      "id": 3,
-      "title": "Muhammed",
-      "date": "July 01, 2024 11:55:36 AM",
-      "body": " consectetur adipisicing elit. Amet corrupti facere dignissimos laborum! Numquam autem inventore vel architecto nam iure id placeat? Iste, "
-    },
-    {
-      "id": 9,
       "title": "Kennymas",
-      "date": "November 03, 2023 12:49:59 PM",
+      "date": "November 06, 2023 11:56:15 AM",
       "body": "A quick reference cheatsheet to help anyone using Git remember the basics and complete necessary version control tasks."
     },
     {
-      "id": 10,
+      "id": 2,
       "title": "Supreme",
-      "date": "November 03, 2023 12:51:58 PM",
-      "body": "Supreme Chops"
+      "date": "November 06, 2023 11:56:47 AM",
+      "body": "A quick reference cheatsheet to help anyone using Git remember the basics and complete necessary version control tasks."
+    },
+    {
+      "id": 3,
+      "title": "Rocco",
+      "date": "November 06, 2023 11:56:58 AM",
+      "body": "A quick reference cheatsheet to help anyone using Git remember the basics and complete necessary version control tasks."
+    },
+    {
+      "id": 4,
+      "title": "Hollar",
+      "date": "November 06, 2023 11:57:10 AM",
+      "body": "A quick reference cheatsheet to help anyone using Git remember the basics and complete necessary version control tasks."
+    },
+    {
+      "id": 5,
+      "title": "Mohammed",
+      "date": "November 06, 2023 12:03:13 PM",
+      "body": "{posts, handleEdit, editBody, editTitle, setEditBody, setEditTitle}"
     }
   ]
 }
