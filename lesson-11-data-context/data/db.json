@@ -26,8 +26,8 @@
     },
     {
       "id": 5,
-      "title": "Mohammed",
-      "date": "November 06, 2023 12:03:13 PM",
+      "title": "Muaz",
+      "date": "November 06, 2023 12:28:54 PM",
       "body": "{posts, handleEdit, editBody, editTitle, setEditBody, setEditTitle}"
     }
   ]
