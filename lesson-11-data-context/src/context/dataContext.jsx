@@ -10,19 +10,16 @@ import api from "../api/posts";
 const DataContext = createContext({});
 
 export const DataProvider = ({children}) => {
+
     const [posts, setPosts] = useState([]);
+    const [search, setSearch] = useState("");
+    const [searchResult, setSearchResult] = useState([]);
+    const [editTitle, setEditTitle] = useState("");
+    const [editBody, setEditBody] = useState("");
+    const { width } = useWindowSize()
+    const {data, fetchError, isLoading} = useAxiosFetch('http://localhost:3500/posts');
 
-  const [search, setSearch] = useState("");
-  const [searchResult, setSearchResult] = useState([]);
-  const [postTitle, setPostTitle] = useState("");
-  const [postBody, setPostBody] = useState("");
-  const [editTitle, setEditTitle] = useState("");
-  const [editBody, setEditBody] = useState("");
 
-  const { width } = useWindowSize()
-
-  
-  const {data, fetchError, isLoading} = useAxiosFetch('http://localhost:3500/posts');
   useEffect(() => {
     setPosts(data)
   }, [data])
@@ -72,8 +69,7 @@ export const DataProvider = ({children}) => {
     return (
             <DataContext.Provider value= {{
                 width, search, setSearch,       // Header And Nav
-                posts, fetchError, isLoading, searchResult,     // Home
-                postTitle, setPostTitle, postBody, setPostBody,   // Newpost
+                posts, fetchError, isLoading, searchResult, setPosts,    // Home
                 handleDelete,   // Post Page
                 handleEdit, editTitle, editBody, setEditBody, setEditTitle,   // Edit Post
             }}>

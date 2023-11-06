@@ -29,6 +29,18 @@
       "title": "Muaz",
       "date": "November 06, 2023 12:28:54 PM",
       "body": "{posts, handleEdit, editBody, editTitle, setEditBody, setEditTitle}"
+    },
+    {
+      "id": 6,
+      "title": "Rocco",
+      "date": "November 06, 2023 3:14:13 PM",
+      "body": "const handleSubmit = async (e) => {\n    e.preventDefault();\n    const id = posts.length ? posts[posts.length - 1].id + 1 : 1;\n    const date = format(new Date(), \"MMMM dd, yyyy pp\");\n    const newPost = { id, title: postTitle, date, body: postBody };\n    try {\n      const response = await api.post(\"/posts\", newPost);\n      const allPost = [...posts, response.data];\n      setPosts(allPost);\n      setPostTitle(\"\");\n      setPostBody(\"\");\n      navigate(\"/\");\n    } catch (error) {\n      console.log(`Error: ${error.message}`);\n    }\n  };"
+    },
+    {
+      "id": 7,
+      "title": "Hollar",
+      "date": "November 06, 2023 3:20:16 PM",
+      "body": "const handleSubmit = async (e) => {\n    e.preventDefault();\n    const id = posts.length ? posts[posts.length - 1].id + 1 : 1;\n    const date = format(new Date(), \"MMMM dd, yyyy pp\");\n    const newPost = { id, title: postTitle, date, body: postBody };\n    try {\n      const response = await api.post(\"/posts\", newPost);\n      const allPost = [...posts, response.data];\n      setPosts(allPost);\n      setPostTitle(\"\");\n      setPostBody(\"\");\n      navigate(\"/\");\n    } catch (error) {\n      console.log(`Error: ${error.message}`);\n    }\n  };"
     }
   ]
 }
