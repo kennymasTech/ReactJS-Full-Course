@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import DataContext from "./context/DataContext";
 import format from "date-fns/format";
 import { useNavigate } from "react-router-dom";
-import api from "./api/posts"
+import api from "./api/posts";
 
 const NewPost = () => {
 
