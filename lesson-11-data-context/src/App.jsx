@@ -9,8 +9,7 @@ import About from "./About";
 import HomeLayout from "./HomeLayout";
 import api from "./api/posts";
 import EditPost from "./EditPost";
-import useWindowSize from "./hooks/useWindowSize";
-import useAxiosFetch from "./hooks/useAxiosFetch";
+import { DataProvider } from "./context/DataContext";
 
 
 const App = () => {
@@ -108,7 +107,8 @@ const App = () => {
   };
 
   return (
-    <Routes>
+    <DataProvider>
+      <Routes>
       <Route
         path="/"
         element={<HomeLayout search={search} setSearch={setSearch} width={ width }/>}
@@ -155,6 +155,7 @@ const App = () => {
         <Route path="*" element={<Missing />} />
       </Route>
     </Routes>
+    </DataProvider>
   );
 };
 
