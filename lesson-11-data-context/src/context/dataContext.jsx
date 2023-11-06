@@ -1,10 +1,17 @@
 
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react';
 
-const dataContext = () => {
-  return (
-    <div>dataContext</div>
-  )
+const DataContext = createContext({});
+
+export const DataProvider = ({children}) => {
+    return (
+            <DataContext.Provider value= {{
+
+            }}>
+                {children}
+            </DataContext.Provider>
+                
+    )
 }
 
-export default dataContext
+export default DataContext
