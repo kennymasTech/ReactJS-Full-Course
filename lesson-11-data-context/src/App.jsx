@@ -43,24 +43,6 @@ const App = () => {
     setSearchResult(filterResult.reverse());
   }, [posts, search]);
 
-  // useEffect(() => {
-  //   const fetchPost = async () => {
-  //     try {
-  //       const response = await api.get("/posts");
-  //       setPosts(response.data);
-  //     } catch (error) {
-  //       if (error.message) {
-  //         console.log(error.response.data);
-  //         console.log(error.response.status);
-  //         console.log(error.response.headers);
-  //       } else {
-  //         console.log(`Error: ${error.message}`);
-  //       }
-  //     }
-  //   };
-  //   fetchPost();
-  // }, []);   
-
 
 
   const navigate = useNavigate();
@@ -114,7 +96,7 @@ const App = () => {
       <Routes>
       <Route
         path="/"
-        element={<HomeLayout search={search} setSearch={setSearch} width={ width }/>}
+        element={<HomeLayout search={search} setSearch={setSearch} />}
       >
         <Route index element={<Home
          posts={searchResult} 
