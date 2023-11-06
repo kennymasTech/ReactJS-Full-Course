@@ -1,12 +1,12 @@
 
-import { useContext } from 'react'
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom'
 import DataContext from './context/DataContext'
 
 const Nav = () => {
 
   const { search, setSearch } = useContext(DataContext)
-  
+
   return (
     <nav className='Nav'>
 
