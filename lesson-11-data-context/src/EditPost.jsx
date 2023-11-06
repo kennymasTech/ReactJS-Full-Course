@@ -1,5 +1,6 @@
-import React, { useContext, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+
+import React, { useContext, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import DataContext from './context/DataContext';
 
 const EditPost = () => {
@@ -51,7 +52,7 @@ const EditPost = () => {
             </>
         }
   </main>
-  )
-}
+  );
+};
 
-export default EditPost
+export default EditPost;
