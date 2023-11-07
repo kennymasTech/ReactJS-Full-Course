@@ -23,7 +23,7 @@ export const DataProvider = ({children}) => {
   useEffect(() => {
     const filterResult = posts.filter(
       (post) =>
-        post.body.toLocaleLowerCase().includes(search.toLowerCase()) ||
+        post.body.toLowerCase().includes(search.toLowerCase()) ||
         post.title.toLowerCase().includes(search.toLowerCase())
     );
     setSearchResult(filterResult.reverse());
