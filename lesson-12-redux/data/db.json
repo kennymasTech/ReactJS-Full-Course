@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Kennymas",
+      "date": "November 06, 2023 11:56:15 AM",
+      "body": "A quick reference cheatsheet to help anyone using Git remember the basics and complete necessary version control tasks."
+    },
+    {
+      "id": 2,
+      "title": "Supreme",
+      "date": "November 06, 2023 11:56:47 AM",
+      "body": "A quick reference cheatsheet to help anyone using Git remember the basics and complete necessary version control tasks."
+    },
+    {
+      "id": 3,
+      "title": "Rocco",
+      "date": "November 06, 2023 11:56:58 AM",
+      "body": "A quick reference cheatsheet to help anyone using Git remember the basics and complete necessary version control tasks."
+    },
+    {
+      "id": 4,
+      "title": "Hollar",
+      "date": "November 06, 2023 11:57:10 AM",
+      "body": "A quick reference cheatsheet to help anyone using Git remember the basics and complete necessary version control tasks."
+    }
+  ]
+}
