@@ -1,6 +1,6 @@
 
 import { createStore, action, thunk, computed } from "easy-peasy";
-import api from "../src/api/posts";
+import api from "../api/posts";
 
 
 export default createStore ({
