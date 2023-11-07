@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NewPost from "./pages/NewPost";
 import PostPage from "./pages/PostPage";
-import Missing from "./Missing";
+import Missing from "./pages/Missing";
 import About from "./pages/About";
 import HomeLayout from "../layouts/HomeLayout";
 import EditPost from "./pages/EditPost";
