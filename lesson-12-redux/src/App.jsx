@@ -17,7 +17,7 @@ const App = () => {
     'http://localhost:3500/posts'
     );
 
-    
+    const setPosts = useStoreActions((actions) => actions.setPosts)
 
   useEffect(() => {
     setPosts(data)
