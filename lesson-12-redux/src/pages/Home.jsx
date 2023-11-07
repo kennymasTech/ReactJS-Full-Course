@@ -1,5 +1,5 @@
 
-import Feed  from "../Feed";
+import Feed  from "../components/Feed";
 import { useStoreState} from "easy-peasy";
 
 
