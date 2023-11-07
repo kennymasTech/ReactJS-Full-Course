@@ -1,11 +1,19 @@
 
-import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import DataContext from './context/DataContext';
+import { useEffect } from 'react';
+import { action, useStoreActions, useStoreState } from 'easy-peasy';
 
 const Nav = () => {
 
-  const { search, setSearch } = useContext(DataContext)
+  const posts = useStoreState((state) => state.posts)
+  const search = useStoreState((state) => state.search)
+
+  const setSearch = useStoreActions((actions) => actions.setSearch)
+  const setSearchResults = useStoreActions((actions) => actions.setSearchState)
+
+  useEffect (() => {
+
+  }, [third]);
 
   return (
     <nav className='Nav'>
