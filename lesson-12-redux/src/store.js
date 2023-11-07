@@ -68,7 +68,7 @@ export default createStore ({
           }
     }),
 
-    editPost: thunk(async ( actions, ) => {
+    editPost: thunk(async ( actions, updatedPost, helpers ) => {
 
     })
 
