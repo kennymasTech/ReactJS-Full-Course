@@ -1,4 +1,5 @@
-import Post from "./Post";
+
+import { Post } from "./index";
 
 const Feed = ({ posts }) => {
   return (
