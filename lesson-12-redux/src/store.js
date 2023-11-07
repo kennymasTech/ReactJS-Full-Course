@@ -40,8 +40,8 @@ export default createStore ({
     }),
 
     setPostCount: computed((state) => state.posts.length),
-    getPostById: computed((id) => {
-        return state.posts.find(post => post.id.toString() === id)
+    getPostById: computed((state) => {
+        return (id) => state.posts.find(post => post.id.toString() === id)
     }),
 
     savePost: thunk(async ( actions, newPost, helpers ) => {
@@ -51,9 +51,9 @@ export default createStore ({
             actions.setPosts([...posts, response.data]);
             actions.setPostTitle("");
             actions.setPostBody("");
-          } catch (error) {
+        } catch (error) {
             console.log(`Error: ${error.message}`);
-          }
+        }
         
     }),
 
@@ -62,14 +62,25 @@ export default createStore ({
         try {
             await api.delete(`/posts/${id}`);
             actions.setPosts(posts.filter((post) => post.id !== id));
-            navigate("/");
-          } catch (error) {
+        } catch (error) {
             console.log(`Error: ${error.message}`);
-          }
+        }
     }),
 
     editPost: thunk(async ( actions, updatedPost, helpers ) => {
         const { posts } = helpers.getState();
+        const { id } = updatedPost;
+
+        try {
+            const response = await api.put(`/posts/${id}`, updatedPost);
+            actions.setPosts(
+              posts.map((post) => (post.id === id ? { ...response.data } : post))
+            );
+            actions.setEditTitle("");
+            actions.setEditBody("");
+        } catch (error) {
+            console.log(`Error: ${error.message}`);
+        }
     })
 
 

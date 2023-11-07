@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import NewPost from "./NewPost";
@@ -8,13 +7,11 @@ import Missing from "./Missing";
 import About from "./About";
 import HomeLayout from "./HomeLayout";
 import EditPost from "./EditPost";
-import { DataProvider } from "./context/DataContext";
 
 
 const App = () => {
  
   return (
-    <DataProvider>
       <Routes>
       <Route
         path="/"
@@ -41,7 +38,6 @@ const App = () => {
         <Route path="*" element={<Missing />} />
       </Route>
     </Routes>
-    </DataProvider>
   );
 };
 
