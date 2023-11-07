@@ -1,7 +1,7 @@
 
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
-import { actions, useStoreActions, useStoreState } from 'easy-peasy';
+import { useStoreActions, useStoreState } from 'easy-peasy';
 
 const Nav = () => {
 
@@ -9,7 +9,7 @@ const Nav = () => {
   const search = useStoreState((state) => state.search)
 
   const setSearch = useStoreActions((actions) => actions.setSearch)
-  const setSearchResults = useStoreActions((actions) => actions.setSearchState)
+  const setSearchResults = useStoreActions((actions) => actions.setSearchResults)
 
   useEffect(() => {
     const filterResult = posts.filter(
