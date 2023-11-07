@@ -7,9 +7,16 @@ import Missing from "./Missing";
 import About from "./About";
 import HomeLayout from "./HomeLayout";
 import EditPost from "./EditPost";
+import useAxiosFetch from "./hooks/useAxiosFetch";
+import { useEffect } from "react";
 
 
 const App = () => {
+  const {data, fetchError, isLoading} = useAxiosFetch('http://localhost:3500/posts');
+
+  useEffect(() => {
+    setPosts(data)
+  }, [data])
  
   return (
       <Routes>
