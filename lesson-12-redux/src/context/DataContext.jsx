@@ -17,7 +17,7 @@ export const DataProvider = ({children}) => {
 
   useEffect(() => {
     setPosts(data)
-  }, [data])
+  }, [data]);
 
 
   useEffect(() => {
