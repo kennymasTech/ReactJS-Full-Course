@@ -66,6 +66,10 @@ export default createStore ({
           } catch (error) {
             console.log(`Error: ${error.message}`);
           }
+    }),
+
+    editPost: thunk(async ( actions, ) => {
+
     })
 
 
