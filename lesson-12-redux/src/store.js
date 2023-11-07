@@ -69,7 +69,7 @@ export default createStore ({
     }),
 
     editPost: thunk(async ( actions, updatedPost, helpers ) => {
-
+        const { posts } = helpers.getState();
     })
 
 
