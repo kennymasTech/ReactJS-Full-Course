@@ -1,7 +1,7 @@
 
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
-import { action, useStoreActions, useStoreState } from 'easy-peasy';
+import { actions, useStoreActions, useStoreState } from 'easy-peasy';
 
 const Nav = () => {
 
