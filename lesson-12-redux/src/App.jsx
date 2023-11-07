@@ -21,7 +21,7 @@ const App = () => {
 
   useEffect(() => {
     setPosts(data)
-  }, [data])
+  }, [data, setPosts])
  
   return (
       <Routes>
