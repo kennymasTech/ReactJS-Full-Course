@@ -57,7 +57,16 @@ export default createStore ({
         
     }),
 
-    deletePost: thunk()
+    deletePost: thunk(async ( actions, id, helpers ) => {
+        const { posts } = helpers.getState()
+        try {
+            await api.delete(`/posts/${id}`);
+            actions.setPosts(posts.filter((post) => post.id !== id));
+            navigate("/");
+          } catch (error) {
+            console.log(`Error: ${error.message}`);
+          }
+    })
 
 
 
