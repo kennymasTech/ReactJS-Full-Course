@@ -45,8 +45,9 @@ const Counter = () => {
 
     const updateArray = (newVal) => {
         setValues ({...values, last: "Dave"})
-        setCount(prev => ({...prev, last: "Kennymas"}))
+        setValues(prev => ({...prev, last: "Kennymas"}))
     }
+    updateArray()
 
   return (
     <section>
