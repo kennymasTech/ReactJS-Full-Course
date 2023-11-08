@@ -62,6 +62,6 @@ const Counter = () => {
         </div>
     </section>
   )
-}
+};
 
 export default Counter
