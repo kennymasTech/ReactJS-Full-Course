@@ -13,14 +13,12 @@ const App = () => {
 
   const sum = useCallback(() => num1 + num2)
 
-  const buildArray = () => {
-
-  }
+  const buildArray = useCallback(() => [num1, num2], [num1, num2])
 
   useEffect(() => {
       console.log(`new sum. Value: ${sum()}`);
       setResult(sum())
-  }, [sum])
+  }, [buildArray])
 
   return (
     <main className='App'>
