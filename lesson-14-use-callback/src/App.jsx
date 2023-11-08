@@ -13,9 +13,9 @@ const App = () => {
 
   const sum = useCallback(() => num1 + num2)
 
-  // const buildArray = () => {
+  const buildArray = () => {
 
-  // }
+  }
 
   useEffect(() => {
       console.log(`new sum. Value: ${sum()}`);
