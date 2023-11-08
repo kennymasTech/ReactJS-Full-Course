@@ -43,7 +43,7 @@ const Counter = () => {
     }
 
 
-    const updateArray = (newVal) => {
+    const updateArray = () => {
         setValues ({...values, last: "Dave"})
         setValues(prev => ({...prev, last: "Kennymas"}))
     }
