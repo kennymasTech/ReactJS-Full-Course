@@ -49,6 +49,7 @@ const Counter = () => {
         setValues(prev => ({...prev, last: "Kennymas"}))
     }
     updateArray()
+    console.log(values);
 
   return (
     <section>
