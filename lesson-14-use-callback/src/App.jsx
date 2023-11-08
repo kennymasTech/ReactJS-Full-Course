@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
       console.log(`new sum. Value: ${sum()}`);
-      setResult(sum())
+      setResult(buildArray())
   }, [buildArray])
 
   return (
