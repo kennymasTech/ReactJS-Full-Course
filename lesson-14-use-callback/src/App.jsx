@@ -11,7 +11,11 @@ const App = () => {
   const [ num2 ] = useState(5)
 
   const sum = () => num1 + num2
-  
+
+  useEffect(() => {
+      console.log(`new sum. Value: ${sum()}`);
+  }, [sum])
+
   return (
     <div>
       
