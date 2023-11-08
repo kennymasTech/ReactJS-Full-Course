@@ -47,7 +47,7 @@ const Counter = () => {
         setValues ({...values, last: "Dave"})
         setValues(prev => ({...prev, last: "Kennymas"}))
     }
-    updateArray(ne)
+    updateArray()
 
   return (
     <section>
