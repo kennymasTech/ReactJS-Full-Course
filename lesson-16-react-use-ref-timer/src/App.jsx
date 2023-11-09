@@ -12,11 +12,11 @@ const App = () => {
 
   const inputRef = useRef();
 
-  const handleInputChange = () => {
+  const handleInputChange = (e) => {
     setRandomInput(e.target.value)
 
     renders.current++
-  }
+  };
 
   // const focusOnInput = () => {
   //   inputRef.current.focus()
