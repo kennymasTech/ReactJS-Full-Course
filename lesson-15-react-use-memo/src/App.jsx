@@ -13,6 +13,7 @@ const getArray = () => {
 
 const App = () => {
   const [ userInput, setUserInput ] = useState('')
+  const [ randomInput, setRandomInput ] = useState('')
   
 
   return (
