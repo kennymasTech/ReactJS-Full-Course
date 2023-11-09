@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React from 'react';
+import { useEffect, useState, useCallback, useMemo } from "react";
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+const getArray = () => {
+  for(let i = 0; i < 1000000000; i++) {
+
+  }
+  return["Kennymas", "Developer"]
 }
 
-export default App
+
+const App = () => {
+  const [ userInput, setUserInput ] = useState('')
+  const [ randomInput, setRandomInput ] = useState('')
+  
+  const fib = useCallback((n) => {
+    return n <= 1 ? n : fib(n - 1) + fib(n - 2)
+  }, [])
+
+  const fibNumber = useMemo(() => fib(userInput), [userInput, fib]);
+
+  const myArray = useMemo(() => getArray(), [])
+
+  useEffect(() => {
+    console.log("New Array");
+  }, [myArray])
+
+
+  return (
+    <main className='App'>
+      <label>Fibonacci Sequence:</label>
+        <input type="text" placeholder='Position' 
+                value={userInput} onChange={(e) => setUserInput(e.target.value)}
+         />
+
+         <p> Number: {fibNumber || ".."} </p>
+        
+         <br />
+         <br />
+        
+        <label> Random Input </label>
+        <input type="text" 
+                value={randomInput} 
+                placeholder="type Here" 
+                onChange={(e) => setRandomInput(e.target.value)} 
+                />
+
+        <p> Result: {randomInput} </p>
+        
+    </main>
+  )
+};
+
+
+export default App;
