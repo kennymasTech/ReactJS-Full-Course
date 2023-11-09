@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React from 'react';
+import { useEffect, useState, useCallback } from "react";
+
+
+
+const App = () => {
+  const [ userInput, setUserInput ] = useState('')
+  const [ result, setResult ] = useState(0)
+  const [ num1 ] = useState(5)
+  const [ num2 ] = useState(5)
+
+  const sum = useCallback(() => num1 + num2, [num1, num2])
+
+  const buildArray = useCallback(() => [num1, num2], [num1, num2])
+
+  useEffect(() => {
+      console.log(`new sum. ${buildArray()}`);
+      setResult(buildArray())
+  }, [buildArray])
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <main className='App'>
+        <input type="text" placeholder='Type Here' 
+                value={userInput} onChange={(e) => setUserInput(e.target.value)} />
 
-export default App
+        <h1>OutPut: { userInput || ".." } </h1>
+    </main>
+  )
+};
+
+
+export default App;
