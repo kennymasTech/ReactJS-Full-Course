@@ -30,7 +30,6 @@ const App = () => {
             <button onClick={(() => setColor(prev => !prev))} > Color </button>
         </section>
 
-        <button onClick={resetTimer} > Reset </button>
 
         <br />
         <br />
