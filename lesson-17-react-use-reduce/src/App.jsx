@@ -27,7 +27,7 @@ const App = () => {
         <section>
             <button onClick={() => setCount(prev => prev - 1)} > - </button>
             <button onClick={() => setCount(prev => prev + 1)} > + </button>
-            <button onClick={() => setColor(prev => !prev)} > Color </button>
+            <button onClick={(() => setColor(prev => !prev))} > Color </button>
         </section>
 
         <button onClick={resetTimer} > Reset </button>
