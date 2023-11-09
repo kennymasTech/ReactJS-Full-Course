@@ -19,11 +19,29 @@ const App = () => {
       renders.current++;
       setSeconds(prev => prev + 1);
     }, 1000)
+    inputRef.current.focus()
   }
 
   const stopTimer = () => {
     clearInterval(timerId.current)
-    timerId.current = 0
+    timerId.current = 0;
+    inputRef.current.focus()
+   }
+
+   const resetTimer = () => {
+      stopTimer()
+      if(seconds) {
+        renders.current++;
+        setSeconds(0)
+      }
+      inputRef.current.focus
+
+            //  OR
+    // clearInterval(timerId.current)
+    // timerId.current = 0;
+    // setSeconds(0)
+    // renders.current ++;
+    // inputRef.current.focus()
    }
 
 
@@ -61,7 +79,7 @@ const App = () => {
             <button onClick={startTimer} > Start </button>
         </section>
 
-        <button> Reset </button>
+        <button onClick={resetTimer} > Reset </button>
 
         <br />
         <br />
