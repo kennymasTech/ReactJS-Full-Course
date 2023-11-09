@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 
 
 const App = () => {
-  const [ randomInput, setRandomInput ] = useState('')
+  const [ randomInput, setRandomInput ] = useState('');
   const [ seconds, setSeconds ] = useState(0)
 
   const renders = useRef(0)
