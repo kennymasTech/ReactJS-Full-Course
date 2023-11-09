@@ -14,12 +14,19 @@ const App = () => {
 
   const timerId = useRef();
 
-  const startTimer = (() => {
+  const startTimer = () => {
     timerId.current = setInterval(() => {
       renders.current++;
       setSeconds(prev => prev + 1);
     }, 1000)
-  })
+  }
+
+  const stopTimer = () => {
+    clearInterval(timerId.current)
+    timerId.current = 0
+   }
+
+
 
   const handleInputChange = (e) => {
     setRandomInput(e.target.value)
@@ -50,7 +57,7 @@ const App = () => {
 
         <section>
             {/* <button onClick={focusOnInput} > Focus </button> */}
-            <button> Stop </button>
+            <button onClick={stopTimer} > Stop </button>
             <button onClick={startTimer} > Start </button>
         </section>
 
@@ -59,7 +66,7 @@ const App = () => {
         <br />
         <br />
 
-        <p> Seconds :  </p>
+        <p> Seconds : {seconds} </p>
 
         <br />
         <br />
