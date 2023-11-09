@@ -8,7 +8,7 @@ const App = () => {
   const [ randomInput, setRandomInput ] = useState('');
   const [ seconds, setSeconds ] = useState(0);
 
-  const renders = useRef(0)
+  const renders = useRef(0);
 
   const inputRef = useRef()
 
