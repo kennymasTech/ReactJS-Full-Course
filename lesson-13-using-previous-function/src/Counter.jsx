@@ -26,7 +26,7 @@ import { useState } from "react";
 
 const Counter = () => {
     const [ count, setCount ] = useState(0)
-    const [ values, setValues ] = useState({firstName: "", lastName: "" })
+    // const [ values, setValues ] = useState({firstName: "", lastName: "" })
 
     const add = () => {
         // setCount(count + 1)
@@ -44,12 +44,12 @@ const Counter = () => {
     }
 
 
-    const updateArray = () => {
-        setValues ({...values, last: "Dave"})
-        setValues(prev => ({...prev, last: "Kennymas"}))
-    }
-    updateArray()
-    console.log(values);
+    // const updateArray = () => {
+    //     setValues ({...values, last: "Dave"})
+    //     setValues(prev => ({...prev, last: "Kennymas"}))
+    // }
+    // updateArray()
+    // console.log(values);
 
   return (
     <section>
