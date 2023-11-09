@@ -30,16 +30,10 @@ const App = () => {
             <button onClick={(() => setColor(prev => !prev))} > Color </button>
         </section>
 
-
         <br />
         <br />
 
-        <p> Seconds : {seconds} </p>
-
-        <br />
-        <br />
-
-        <p> {randomInput} </p>
+        <p> {userInput} </p>
 
     </main>
   )
