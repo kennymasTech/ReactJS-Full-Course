@@ -41,6 +41,11 @@ const App = () => {
          <br />
         
         <label> Random Input </label>
+        <input type="text" 
+                value={randomInput} 
+                placeholder="type Here" 
+                onChange={(e) => setRandomInput(e.target.value)} 
+                />
         
     </main>
   )
