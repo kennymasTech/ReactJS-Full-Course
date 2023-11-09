@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 const App = () => {
-  const [ useInput, setUseInput ] = useState('')
+  const [ userInput, setUserInput ] = useState('')
   const [ count, setCount ] = useState(0)
   const [ color, setColor ] = useState(false)
  
@@ -14,10 +14,9 @@ const App = () => {
   return (
     <main className='App'>
         <input 
-            type="text" 
-            value={randomInput} 
-            placeholder="Type Here" 
-            onChange={handleInputChange} 
+            type="text" style={{color: color ? '#fff' : '#fff92'}}
+            value={userInput} 
+            onChange={(e) => setUserInput(e.target.value)} 
         />
 
         <p> Renders : {renders.current} </p>
