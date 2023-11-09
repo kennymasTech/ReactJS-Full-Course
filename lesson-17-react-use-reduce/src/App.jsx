@@ -19,11 +19,10 @@ const App = () => {
             onChange={(e) => setUserInput(e.target.value)} 
         />
 
-        <p> Renders : {renders.current} </p>
-        
+        <br />
+        <br />
 
-        <br />
-        <br />
+        <p> {count} </p>
 
         <section>
             {/* <button onClick={focusOnInput} > Focus </button> */}
