@@ -14,7 +14,7 @@ const App = () => {
   return (
     <main className='App'>
         <input 
-            type="text" style={{color: color ? '#fff' : '#fff92'}}
+            type="text" style={{color: color ? '#FFF' : '#FFF952'}}
             value={userInput} 
             onChange={(e) => setUserInput(e.target.value)} 
         />
@@ -25,8 +25,8 @@ const App = () => {
         <p> {count} </p>
 
         <section>
-            <button onClick={() => setCount(prev => prev - 1)} > - </button>
-            <button onClick={() => setCount(prev => prev + 1)} > + </button>
+            <button onClick={(() => setCount(prev => prev - 1))} > - </button>
+            <button onClick={(() => setCount(prev => prev + 1))} > + </button>
             <button onClick={(() => setColor(prev => !prev))} > Color </button>
         </section>
 
