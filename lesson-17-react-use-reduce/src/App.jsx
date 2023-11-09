@@ -1,20 +1,30 @@
 
 import React from 'react';
-import { useState } from "react";
+import { useState, useReducer } from "react";
 
 
+
+const reducer = ( state, action ) => {
+  switch(action.type) {
+    case 'increment': 
+      return {count: state.count + 1}
+    case 'decrement': 
+      return {count: state.count - 1}
+  }
+}
 
 const App = () => {
+  const [ state, dispatch ] = useReducer(reducer, {count: 0})
   const [ userInput, setUserInput ] = useState('')
-  const [ count, setCount ] = useState(0)
+  // const [ count, setCount ] = useState(0)
   const [ color, setColor ] = useState(false)
  
 
   
   return (
-    <main className='App'>
+    <main className='App' style={{color: color ? '#FFF' : '#FFF952'}}>
         <input 
-            type="text" style={{color: color ? '#FFF' : '#FFF952'}}
+            type="text" 
             value={userInput} 
             onChange={(e) => setUserInput(e.target.value)} 
         />
