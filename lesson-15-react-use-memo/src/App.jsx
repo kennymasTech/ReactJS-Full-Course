@@ -31,7 +31,7 @@ const App = () => {
   return (
     <main className='App'>
       <label>Fibonacci Sequence:</label>
-        <input type="number" placeholder='Position' 
+        <input type="text" placeholder='Position' 
                 value={userInput} onChange={(e) => setUserInput(e.target.value)}
          />
 
